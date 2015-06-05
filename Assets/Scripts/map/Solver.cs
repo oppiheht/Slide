@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 public class Solver {
 
-	private const int NORTH = 0;
-	private const int EAST = 1;
-	private const int SOUTH = 2;
-	private const int WEST = 3;
+	public const int NORTH = 0;
+	public const int EAST = 1;
+	public const int SOUTH = 2;
+	public const int WEST = 3;
 
 	/**
 	 * Attempts to solve the given game grid. A grid is solveable if some
@@ -58,7 +58,7 @@ public class Solver {
 	 * 
 	 * @return The node the character will end at.
 	 */
-	private static Node SlideDirection(int direction, GameGrid gameGrid, Node start) {
+	public static Node SlideDirection(int direction, GameGrid gameGrid, Node start) {
 		Node currentNode = start;
 		Node nextNodeInDirection = getNodeInDirection(direction, gameGrid, currentNode);
 

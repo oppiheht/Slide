@@ -9,10 +9,9 @@ public class MapController : MonoBehaviour {
 
 	public float rockSpacing = 2.0f;
 
+	public GameGrid currentGameGrid;
 	private Queue<GameObject> pool = new Queue<GameObject>();
-	private List<GameObject> currentMap = new List<GameObject>();
-
-	private int rockCount = 0;
+	private List<GameObject> currentRocksInMap = new List<GameObject>();
 
 	// Use this for initialization
 	void Start () {
@@ -21,17 +20,18 @@ public class MapController : MonoBehaviour {
 
 	public void GenerateNewMap() {
 		ClearOldMap();
-		GameGrid gg = SolvableGridFactory.newSolvableGrid(10, 8);
-		print(gg.ToString());
-		PlaceGrid(gg);
+		currentGameGrid = SolvableGridFactory.newSolvableGrid(10, 8);
+		player.Reset();
+		print(currentGameGrid.ToString());
+		PlaceGrid(currentGameGrid);
 	}
 
 	public void ClearOldMap() {
-		foreach (GameObject o in currentMap) {
+		foreach (GameObject o in currentRocksInMap) {
 			pool.Enqueue(o);
 			o.transform.position = new Vector3(0, -100, 0);
 		}
-		currentMap.Clear();
+		currentRocksInMap.Clear();
 	}
 
 	private void PlaceGrid(GameGrid gg) {
@@ -57,12 +57,11 @@ public class MapController : MonoBehaviour {
 			GameObject rock = pool.Dequeue();
 			rock.transform.position = position;
 			rock.transform.rotation = rotation;
-			currentMap.Add(rock);
+			currentRocksInMap.Add(rock);
 		}
 		else {
-			print("created new rock! new rock count is "+ rockCount++);
 			GameObject newRock = Instantiate(rockInstatiate, position, rotation) as GameObject;
-			currentMap.Add(newRock);
+			currentRocksInMap.Add(newRock);
 		}
 	}
 

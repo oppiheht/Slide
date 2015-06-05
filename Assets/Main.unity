@@ -773,7 +773,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 679147254}
   - 218: {fileID: 679147253}
-  - 154: {fileID: 679147252}
   - 114: {fileID: 679147255}
   m_Layer: 0
   m_Name: Terrain
@@ -782,16 +781,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!154 &679147252
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 679147251}
-  m_Material: {fileID: 0}
-  m_Enabled: 1
-  m_TerrainData: {fileID: 15600000, guid: ad6c95aba731ec24fa81b42f8ce8e214, type: 2}
-  m_EnableTreeColliders: 1
 --- !u!218 &679147253
 Terrain:
   m_ObjectHideFlags: 0
@@ -1136,21 +1125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39f42f50d0403c4481da62a449f47c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapController: {fileID: 679147255}
   cc: {fileID: 1118484455}
-  speed: 1
-  gravity: -1
---- !u!65 &1118484459
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1118484454}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.10790002, y: 1.56589997, z: 2.75479984}
-  m_Center: {x: 5.0008297e-05, y: .781449974, z: .350699961}
 --- !u!1 &1225210299
 GameObject:
   m_ObjectHideFlags: 0
