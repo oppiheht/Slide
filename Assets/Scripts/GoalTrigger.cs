@@ -10,7 +10,7 @@ public class GoalTrigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		print ("success!");
+		ScoreKeeper.score++;
 		mapController.GenerateNewMap();
 	}
 }

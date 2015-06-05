@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ScoreKeeper : MonoBehaviour {
 
+	public static int score = 0;
+
 	// Use this for initialization
 	void Start () {
 	

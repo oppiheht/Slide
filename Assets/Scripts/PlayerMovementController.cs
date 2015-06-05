@@ -22,6 +22,11 @@ public class PlayerMovementController : MonoBehaviour {
 
 	}
 
+	public void PlayerTriggeredReset() {
+		ScoreKeeper.score = 0;
+		Reset();
+	}
+
 	public void Reset() {
 		currentNodePosition = mapController.currentGameGrid.GetStartNode();
 		updatePosition();
