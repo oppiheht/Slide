@@ -1,0 +1,4 @@
+Speed mode: Complete as many randomly generated maps as possible in a time period (2 minutes?)
+Perfection: Unlimited time to optimally complete as many maps in a row. No reset. HIgh score persisted.
+CHallenge: Large or absurd maps. Over 30 moves to complete. Persistent counter of challenge maps completed.
+NIght Mode: Only small area near character is visible (like a lantern in a cave). Could work with other modes.
